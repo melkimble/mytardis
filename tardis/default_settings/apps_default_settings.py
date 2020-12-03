@@ -15,8 +15,6 @@ for app in settings.INSTALLED_APPS:
                 if setting.isupper():
                     # print(" - %s" % setting)
                     setattr(this_module, setting, getattr(app_module, setting))
-        except ModuleNotFoundError as e:
-            pass
         except Exception as e:
             # print("Can't load default settings for %s due to:\n%s" % (app, str(e)))
             pass
