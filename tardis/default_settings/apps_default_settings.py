@@ -6,7 +6,12 @@ from django.conf import settings
 this_module = sys.modules[__name__]
 
 
-for app in settings.INSTALLED_APPS:
+try:
+   installed_apps = getattr(settings, "INSTALLED_APPS", [])
+except Exception as e:
+   installed_apps = []
+
+for app in installed_apps:
     if app.startswith("tardis.apps"):
         try:
             app_module = importlib.import_module("%s.default_settings" % app)
