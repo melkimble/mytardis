@@ -177,4 +177,4 @@ CALCULATE_CHECKSUMS_METHODS = {
         'tardis.apps.s3utils.utils.calculate_checksums'
 }
 
-from tardis.default_settings.apps_default_settings import *
+from tardis.default_settings.apps_default_settings import *  # pylint: disable=C0411,C0413
