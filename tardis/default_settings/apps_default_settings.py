@@ -7,9 +7,9 @@ this_module = sys.modules[__name__]
 
 
 try:
-   installed_apps = getattr(settings, "INSTALLED_APPS", [])
+    installed_apps = getattr(settings, "INSTALLED_APPS", [])
 except Exception as e:
-   installed_apps = []
+    installed_apps = []
 
 for app in installed_apps:
     if app.startswith("tardis.apps"):
