@@ -23,7 +23,6 @@ COPY . /app
 RUN pip3 install -r requirements.txt
 RUN pip3 install -r requirements-postgres.txt
 RUN pip3 install -r requirements-mysql.txt
-RUN pip3 install coveralls codacy-coverage
 
 RUN mkdir -p var/store
 
