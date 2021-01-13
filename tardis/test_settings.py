@@ -177,4 +177,6 @@ CALCULATE_CHECKSUMS_METHODS = {
         'tardis.apps.s3utils.utils.calculate_checksums'
 }
 
-from tardis.default_settings.apps_default_settings import *  # pylint: disable=C0411,C0413
+from tardis.default_settings.apps_default_settings import *  # noqa # pylint: disable=C0411,C0413
+
+CHUNK_STORAGE = path.join(DEFAULT_STORAGE_BASE_DIR, "chunks")
